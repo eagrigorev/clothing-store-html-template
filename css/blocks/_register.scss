@@ -1,0 +1,158 @@
+.register {
+    padding: 64px 16px 0 16px;
+    display: flex;
+    justify-content: space-between;
+    &__form {
+        max-width: 360px;
+        margin: 0 22px 0 0;
+        & ul {
+            list-style: none;
+            & li {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+                color: #222222;
+            }
+        }
+        &__text {
+            width: 100%;
+            min-width: 360px;
+            margin: 20px 0 0 0;
+            padding: 13px 0 16px 17px;
+            border: 1px solid #a4a4a4;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            color: #b1b1b1;
+        }
+        &__radio {
+            margin: 31px 0 33px 0;
+        }
+        &__button {
+            cursor: pointer;
+            text-transform: uppercase;
+            margin: 39px 0 96px 0;
+            padding: 16px 29px;
+            border: none;
+            background: #f16d7f;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #ffffff;
+            &:after {
+                content: ">";
+                padding: 0 0 0 20px;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            }
+            &:hover {
+                animation-name: button-color;
+                animation-duration: 3s;
+                @keyframes button-color {
+                    0% {
+                        background-color: #f16d7f;
+                    }
+                    50% {
+                        background-color: black;
+                    }
+                    100% {
+                        background-color: #f16d7f;
+                    }
+                }
+                &:after {
+                    animation-name: arrow-move;
+                    animation-duration: 3s;
+                    @keyframes arrow-move {
+                        0% {
+                            padding: 0 0 0 20px;
+                        }
+                        50% {
+                            padding: 0 0 0 50px;
+                        }
+                        100% {
+                            padding: 0 0 0 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__perks {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        max-width: 652px;
+        & h3 {
+            padding: 0 0 22px 0;
+            text-transform: uppercase;
+        }
+        & ul {
+            padding: 21px 0 0 0px;
+            list-style-position: inside;
+            list-style-image: url("../img/perks-list.png");
+            & li:not(:last-child) {
+                padding: 0 0 16px 0;
+            }
+        }
+    }
+}
+.gender {
+    padding: 0 20px 0 10px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000000;
+}
+.pass-help {
+    padding: 15px 0 0 0;
+    & span {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: #b1b1b1;
+    }
+}
+
+@media (max-width: 645px) {
+    .register {
+        display: flex;
+        flex-direction: column;
+        &__form {
+            max-width: none;
+            &__text {
+                margin: 20px 16px 0 0;
+            }
+            &__button {
+                margin: 39px 0 40px 0;
+            }
+        }
+        &__perks {
+            padding-bottom: 96px;
+        }
+    }
+}
+
+@media (max-width: 475px) {
+    .register {
+        display: flex;
+        flex-direction: column;
+        &__form {
+            margin: 0;
+            &__text {
+                margin: 20px 16px 0 0;
+            }
+            &__button {
+                margin: 39px 0 40px 0;
+            }
+        }
+        &__perks {
+            padding-bottom: 96px;
+        }
+    }
+}

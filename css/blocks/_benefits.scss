@@ -1,0 +1,63 @@
+.benefits {
+    margin: 95.5px 0 0 0;
+    background: #222224;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.benefit {
+    &__card {
+        padding: 103px 0 104px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__description {
+        max-width: 360px;
+        color: #fbfbfb;
+        & h3 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 19.96px;
+            line-height: 24px;
+            text-align: center;
+            padding: 25px 0 0 0;
+        }
+        & p {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13.972px;
+            line-height: 17px;
+            text-align: center;
+            padding: 16px 0 0 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits {
+        margin: 65px 0 0 0;
+        &__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+    }
+    .benefit {
+        &__card:not(:last-child) {
+            padding: 48px 0 0 0;
+        }
+        &__card:last-child {
+            padding: 48px 0 64px 0;
+        }
+    }
+}
+
+@media (max-width: 475px) {
+    .benefits {
+        margin: 96px 0 0 0;
+    }
+}

@@ -1,0 +1,30 @@
+.pagination {
+    padding: 48px 0 0 0;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    &__container {
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        border: 1px solid #ebebeb;
+        border-radius: 4px;
+        max-width: 284px;
+        & a,
+        & p {
+            text-decoration: none;
+            color: #c4c4c4;
+            padding: 15px 0 15px 0;
+        }
+        & a:hover {
+            color: #ef5b70;
+        }
+    }
+}
+.left-arrow {
+    padding-left: 15px;
+}
+.right-arrow {
+    padding-right: 15px;
+}

@@ -1,0 +1,111 @@
+.header {
+    background-color: #222222;
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 75px;
+    }
+}
+.logo {
+    margin: 0 41px 0 0;
+}
+.nav {
+    &__right {
+        a:not(:last-child) {
+            margin: 0 33px 0 0;
+        }
+        &__burger-icon {
+            background: transparent;
+            padding-right: 25px;
+            border: none;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &__burger {
+        position: absolute;
+        z-index: 3;
+        left: calc(100vw - 232px - (100vw - 100%));
+        min-width: 232px;
+        background-color: white;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        &__container {
+            padding: 37px 0 157px 34px;
+        }
+        & h3 {
+            padding: 0 0 24px 0;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+        &__parent {
+            &:not(:first-child) {
+                padding-top: 20px;
+            }
+            padding: 0 0 12px 0;
+            list-style: none;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #f16d7f;
+        }
+        &__child {
+            &:not(:last-child) {
+                padding-bottom: 11px;
+            }
+            list-style: none;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            & a {
+                text-decoration: none;
+                color: #6f6e6e;
+            }
+        }
+        &__open {
+            display: block;
+        }
+        &__close {
+            display: none;
+        }
+        &__cancel {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        &__navigation {
+            padding: 0 32px 0 32px;
+        }
+    }
+}
+
+@media (max-width: 475px) {
+    .header {
+        &__navigation {
+            padding: 0;
+        }
+    }
+    .svg-cart,
+    .svg-login {
+        display: none;
+    }
+    .nav__right {
+        a:not(:last-child) {
+            margin: 0;
+        }
+    }
+}

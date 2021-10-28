@@ -1,0 +1,183 @@
+.footer {
+    &__top {
+        background: linear-gradient(
+                rgba(244, 244, 244, 0.7),
+                rgba(244, 244, 244, 0.7)
+            ),
+            url(../img/footer-background.jpg) no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        &-container {
+            padding: 97px 0 126px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__testimonial {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__subscribe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__email {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        background: #e1e1e1;
+        padding: 15px 64px 15px 20px;
+        border-radius: 23px 0 0 23px;
+        &:focus {
+            outline: none;
+            background-color: lightgrey;
+        }
+        &-button {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            background: #f16d7f;
+            padding: 14.5px 15px 14.5px 15px;
+            border-radius: 0 23px 23px 0;
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+    &__bottom {
+        background: #222224;
+        &-container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+.testimonial {
+    &__quote {
+        padding: 30px 0 0 0;
+        max-width: 360px;
+        font-family: Lato;
+        text-align: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: #222224;
+        & span {
+            font-style: italic;
+        }
+    }
+}
+.subscribe {
+    &__heading {
+        max-width: 557px;
+        text-transform: uppercase;
+        font-style: normal;
+        line-height: 167.2%;
+        text-align: center;
+        color: #222224;
+        &-style-1 {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        &-style-2 {
+            font-weight: normal;
+            font-size: 18px;
+        }
+    }
+    &__form {
+        padding: 32px 0 0 0;
+        display: flex;
+        align-items: center;
+    }
+}
+input {
+    border: none;
+}
+.bottom {
+    &__copyright {
+        padding: 30px 0 30px 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #fbfbfb;
+    }
+    &__icons {
+        padding: 24px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.icon:not(:last-child) {
+    padding: 0 7.3px 0 0;
+}
+.fab {
+    background-color: #ffffff;
+    color: #000000;
+    width: 32px;
+    padding: 8px 0 8px 0;
+    text-align: center;
+    text-decoration: none;
+    &:hover {
+        background-color: #f16d7f;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        &__top {
+            &-container {
+                padding: 64px 0 140px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+            }
+        }
+        &__subscribe {
+            padding: 60px 0 0 0;
+        }
+        &__bottom {
+            &__copyright {
+                padding: 30px 0 30px 32px;
+            }
+            &__icons {
+                padding: 24px 32px 0 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 475px) {
+    .footer {
+        &__bottom {
+            &-container {
+                justify-content: center;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            &__copyright {
+                padding: 40px 0 9px 0;
+            }
+            &__icons {
+                padding: 43px 0 0 0;
+            }
+        }
+    }
+}

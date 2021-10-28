@@ -1,0 +1,45 @@
+.suggested__products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 46px;
+    padding: 193px 0 128px 0;
+}
+
+@media (max-width: 1171px) {
+    .last-uneven-card {
+        display: none;
+    }
+}
+
+@media (max-width: 781px) {
+    .suggested {
+        &__products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .suggested {
+        margin: 155px 0 0 0;
+        &__products {
+            padding: 192.5px 0 128px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+    }
+}
+
+@media (max-width: 475px) {
+    .suggested {
+        &__products {
+            padding: 128.5px 0 64px 0;
+        }
+    }
+}
